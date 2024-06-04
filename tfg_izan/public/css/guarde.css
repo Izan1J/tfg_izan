@@ -1,0 +1,379 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Alatsi;
+}
+
+@font-face {
+  font-family: "Jua";
+  src: url("fonts/Jua-Regular.ttf");
+}
+@font-face {
+  font-family: "Alatsi";
+  src: url("fonts/Alatsi-Regular.ttf");
+}
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+a:active {
+  outline: none;
+}
+
+@keyframes moveToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveToTop {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.btn {
+  display: flex;
+  font-family: Jua;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: #D387A3;
+  color: #FFFFFF;
+  border-radius: 4.625rem;
+  border: 0;
+}
+@media screen and (max-width: 430px) {
+  .btn {
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+  }
+}
+.btn--blue {
+  margin-left: 1%;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: all 0.2s linear;
+}
+.btn--blue:hover {
+  color: #7AC7E1;
+  background-color: #FFFFFF;
+}
+.btn--pink {
+  background-color: rgba(211, 135, 163, 0.3137254902);
+  transition: all 0.2s linear;
+}
+.btn--pink:hover {
+  color: #D387A3;
+  background-color: #FFFFFF;
+}
+.btn--modal {
+  background-color: #43d0ff;
+}
+
+.register-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 20vw;
+  height: 50vh;
+  transform: translate(-50%, -50%);
+  background-color: #cfa9b7;
+  color: #FFFFFF;
+  padding: 2rem;
+  border: 0.5rem solid white;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  font-family: "Jua";
+}
+.register-modal__input {
+  width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  border: 0.1rem solid white;
+  border-radius: 0.4rem;
+}
+.register-modal__title {
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
+}
+@media screen and (max-width: 430px) {
+  .register-modal {
+    width: 70vw;
+  }
+}
+.register-modal__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.close-modal {
+  font-family: "Jua";
+  font-size: 5rem;
+}
+
+header {
+  height: 10vh;
+  background-color: #7AC7E1;
+  display: flex;
+}
+header li {
+  display: inline;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-right: 2rem;
+  font-family: Jua;
+}
+
+.header__logo-box {
+  margin: 0;
+  height: 100%;
+}
+.header__logo {
+  height: 100%;
+}
+.header__nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin: 0;
+  margin-right: 1rem;
+}
+@media screen and (max-width: 430px) {
+  .header__nav {
+    display: none;
+  }
+}
+.header__nav * {
+  margin: 0;
+  margin-left: 2rem;
+}
+.header__burger {
+  width: 100%;
+  height: 100%;
+}
+.header__burger-box {
+  display: none;
+}
+@media screen and (max-width: 430px) {
+  .header__burger-box {
+    display: block;
+    margin-right: 5%;
+    margin-top: 5%;
+    padding: 1rem;
+    height: 50%;
+    background-color: #D387A3;
+    border-radius: 3rem;
+  }
+}
+
+.grid {
+  margin: 0 auto;
+  max-width: 114rem;
+}
+
+.row {
+  display: grid;
+  margin: 0;
+  grid-template-columns: repeat(12, [col-start] minmax(min-content, 100%) [col-end]);
+  gap: 3rem;
+}
+.row--last {
+  margin: 0;
+}
+@media screen and (max-width: 430px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.col-1-2 {
+  grid-column: span 6;
+}
+.col-1-3 {
+  grid-column: span 4;
+}
+.col-2-3 {
+  grid-column: span 8;
+}
+.col-1-4 {
+  grid-column: span 3;
+}
+.col-2-4 {
+  grid-column: span 6;
+}
+.col-3-4 {
+  grid-column: span 9;
+}
+
+footer {
+  padding: 1rem;
+}
+footer a {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.25rem;
+}
+footer p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.75rem;
+}
+footer li {
+  list-style: none;
+}
+
+.footer__redes .redes__img {
+  position: relative;
+  top: 100%;
+  width: 4rem;
+  padding: 0.5rem;
+  border-radius: 3rem;
+}
+@media screen and (max-width: 430px) {
+  .footer__redes .redes__img {
+    top: 40%;
+  }
+}
+@media screen and (max-width: 430px) {
+  .footer__desktop {
+    display: none;
+  }
+}
+.footer__mobile {
+  display: none;
+}
+@media screen and (max-width: 430px) {
+  .footer__mobile {
+    display: block;
+  }
+}
+.footer__mobile .row {
+  flex-direction: row;
+}
+.footer__mobile li {
+  display: inline;
+  gap: 1rem;
+}
+.footer__mobile a {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.inicio {
+  height: 90vh;
+  background-image: url(../images/portada.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 430px) {
+  .inicio {
+    height: 50vh;
+  }
+}
+.inicio__text-box {
+  animation: moveToRight 2s;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  margin-right: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: relative;
+  padding: 2% 5% 2% 10%;
+  animation: move 1s linear;
+}
+@media screen and (max-width: 430px) {
+  .inicio__text-box {
+    top: 0%;
+    height: 50vh;
+    margin: 0;
+  }
+}
+.inicio__text-box * {
+  margin-bottom: 2rem;
+  text-align: left;
+  justify-content: left;
+}
+@media screen and (max-width: 430px) {
+  .inicio__text-box * {
+    text-align: center;
+    justify-content: center;
+  }
+}
+.inicio__text-box p {
+  font-family: Jua;
+  color: #FFFFFF;
+  font-size: 3.5rem;
+  border-bottom: 1rem;
+}
+.inicio__text-box span {
+  color: #FFFFFF;
+  font-size: 2rem;
+}
+
+.features {
+  padding-top: 5vh;
+  background-color: #cbf2ff;
+  margin: 0 auto;
+}
+.features * {
+  margin-bottom: 1.75rem;
+}
+.features__article {
+  display: flex;
+  flex-direction: column;
+}
+.features__img {
+  width: 30vw;
+  height: 30vh;
+}
+@media screen and (max-width: 430px) {
+  .features__img {
+    width: 80vw;
+  }
+}
+.features__text-box {
+  width: 30vw;
+  font-size: 2rem;
+}
+@media screen and (max-width: 430px) {
+  .features__text-box {
+    width: 80vw;
+    text-align: center;
+  }
+}/*# sourceMappingURL=main.css.map */
