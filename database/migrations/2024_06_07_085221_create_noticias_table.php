@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('noticias', function (Blueprint $table) {
             $table->id();
             $table->string('contenido');
-            $table->foreignId('profe_id');
+            $table->foreignId('id_escritora');
             $table->timestamps();
             $table->softDeletes();
         });

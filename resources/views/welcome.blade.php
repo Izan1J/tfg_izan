@@ -25,8 +25,8 @@
                 <li class="nav__item"><a href="#" class="nav__link">Contactanos</a></li>
             </ul>
             @if (Route::has('login'))
-                <button class="btn btn--pink" onclick="openModal()">Iniciar Sesion</button>
-                <a href="{{ route('register') }}" class="btn btn--blue">Registarse</a>
+                <button class="btn btn--login" onclick="openModal()">Iniciar Sesion</button>
+                <a href="{{ route('register') }}" class="btn btn--register">Registarse</a>
             @endif
         </nav>
     </header>
@@ -59,7 +59,7 @@
                 <p>Tranquilos, nosotras cuidamos de vuestros peques</p>
                 <span>En la E.I.M. Angel de la Guarda nosotras nos encargamos cuidar a tus hijos y prepararlos para la
                     entrada a la escuela. ¡Reserva su plaza ya mismo!</span>
-                <a href="#" class="btn">Reservar</a>
+                <a href="{{ route('login') }}" class="btn">Reservar</a>
             </div>
         </section>
         <section class="features">

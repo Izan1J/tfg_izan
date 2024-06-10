@@ -1,7 +1,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
-      <img src="{{asset('images/logo.png')}}" alt="Angel de la Guarda Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="{{asset('images/logo.png')}}" alt="Angel de la Guarda Logo" class="brand-image">
       <span class="brand-text font-weight-light">Angel de la guarda</span>
     </a>
     <div class="sidebar">
@@ -23,6 +23,7 @@
                     </p>
                 </a>
             </li>
+            @role('padre')
             <li class="nav-item">
                 <a href="{{ route('admin.alumnos.create') }}" class="nav-link">
                     <i class="nav-icon fas fa-baby"></i>
@@ -31,6 +32,8 @@
                     </p>
                 </a>
             </li>
+            @endrole
+            @role(['profe','admin'])
             <li class="nav-item">
                 <a href="{{ route('admin.noticias.create') }}" class="nav-link">
                     <i class="nav-icon fas fa-pen"></i>
@@ -39,6 +42,7 @@
                     </p>
                 </a>
             </li>
+            @endrole
             <li class="nav-item">
                 <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
                     <p>

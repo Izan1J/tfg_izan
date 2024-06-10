@@ -58,4 +58,8 @@ class User extends Authenticatable
     public function hijos(){
         return $this->belongsToMany(Alumno::class);
     }
+
+    public function noticias(){
+        return $this->hasMany(Noticia::class);
+    }
 }

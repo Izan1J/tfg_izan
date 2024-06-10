@@ -88,5 +88,9 @@ class DatabaseSeeder extends Seeder
         $padre3->assignRole($role2);
         $profe1->assignRole($role3);
         $profe2->assignRole($role3);
+
+        $this->call([
+            NoticiaSeeder::class,
+        ]);
     }
 }

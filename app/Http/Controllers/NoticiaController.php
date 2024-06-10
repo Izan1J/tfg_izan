@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\Noticia;
 use App\Http\Requests\StoreNoticiaRequest;
-use App\Http\Requests\UpdateNoticiaRequest;
 use Illuminate\Support\Facades\Auth;
 
 class NoticiaController extends Controller
@@ -15,7 +15,7 @@ class NoticiaController extends Controller
     public function index()
     {
         $noticias = Noticia::all();
-        return view('admin.noticias.index', compact('noticias'));
+        return view('admin.noticias.index',compact('noticias'));
     }
 
     /**
@@ -24,7 +24,7 @@ class NoticiaController extends Controller
     public function create()
     {
         $id = Auth::user()->id;
-        return view('admin.noticias.create',compact('id'));
+        return view('admin.noticias.create', compact('id'));
     }
 
     /**
@@ -40,7 +40,7 @@ class NoticiaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Noticia $noticia)
+    public function show(string $id)
     {
         //
     }
@@ -48,7 +48,7 @@ class NoticiaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Noticia $noticia)
+    public function edit(string $id)
     {
         //
     }
@@ -56,7 +56,7 @@ class NoticiaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateNoticiaRequest $request, Noticia $noticia)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -64,8 +64,10 @@ class NoticiaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Noticia $noticia)
+    public function destroy(noticia $noticia)
     {
-        //
+        $noticia->delete();
+        
+        return back();
     }
 }

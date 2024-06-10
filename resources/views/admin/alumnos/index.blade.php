@@ -1,22 +1,26 @@
 @extends('layouts.admin')
 
 @section('content')
-<h1 class="display-1">¡El registro se ha completado correctamente!</h1>
-<h4 class="display-4">Entregue la siguiente documentacion en nuestra oficina para completar la inscripcion:</h4>
-<ul class="list-group list-group-flush">
-    <li class="list-group-item">Fotocopia SIP</li>
-    <li class="list-group-item">Hoja libro de vacunas</li>
-    <li class="list-group-item">Fotocopias DNI padres o tutores</li>
-    <li class="list-group-item">Volante de empadronamiento</li>
-    <li class="list-group-item">Declaracion de la renta del año 2022</li>
-    <li class="list-group-item">Libro de familiar</li>
+<h1 class="text-center">¡El registro se ha completado correctamente!</h1>
+<h4 class="text-center">Entregue la siguiente documentacion en nuestra oficina para completar la inscripcion:</h4>
+<div class="text-center">
+  <ul class="list-unstyled">
+    <li class="">Fotocopia SIP</li>
+    <li class="">Hoja libro de vacunas</li>
+    <li class="">Fotocopias DNI padres o tutores</li>
+    <li class="">Volante de empadronamiento</li>
+    <li class="">Declaracion de la renta del año 2022</li>
+    <li class="">Libro de familiar</li>
   </ul>
-
+</div>
+<div class="text-center">
   <p>¿Quiere que cuidemos de algun hijo suyo más?</p>
-  <a href="{{ route('admin.alumnos.create') }}" class="btn btn-info">
+  <a href="{{ route('admin.alumnos.create') }}" class="btn bg-pink">
     <p>
         Nueva Inscripcion
     </p>
 </a>
+</div>
+
 
 @endsection

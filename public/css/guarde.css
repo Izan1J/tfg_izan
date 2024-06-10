@@ -61,7 +61,7 @@ a:active {
     transform: translateX(0);
   }
 }
-.btn {
+.btn{
   display: flex;
   font-family: Jua;
   font-size: 2rem;
@@ -79,22 +79,22 @@ a:active {
     align-items: center;
   }
 }
-.btn--blue {
+.btn--login {
   margin-left: 1%;
   width: -moz-fit-content;
   width: fit-content;
   background-color: rgba(255, 255, 255, 0.4);
   transition: all 0.2s linear;
 }
-.btn--blue:hover {
+.btn--login:hover {
   color: #7AC7E1;
   background-color: #FFFFFF;
 }
-.btn--pink {
+.btn--register {
   background-color: rgba(211, 135, 163, 0.3137254902);
   transition: all 0.2s linear;
 }
-.btn--pink:hover {
+.btn--register:hover {
   color: #D387A3;
   background-color: #FFFFFF;
 }

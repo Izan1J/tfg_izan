@@ -11,7 +11,7 @@ class StoreNoticiaRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,6 +23,9 @@ class StoreNoticiaRequest extends FormRequest
     {
         return [
             'contenido' => [
+                'required',
+            ],
+            'id_escritora' => [
                 'required',
             ],
         ];

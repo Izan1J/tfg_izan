@@ -16,15 +16,10 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <form method="POST" action="{{route('admin.noticias.store')}}">
+                        <form method="POST" action="{{route('admin.noticias.store')}}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <input type="textarea" name="contenido" id="contenido" class="form-control {{$errors->has('contenido') ? 'is-invalid' : ''}}" placeholder="Escriba el contenido de la noticia" value="{{old('contenido', '')}}">
-                                @if ($errors->has('contenido'))
-                                <span class="text-danger">
-                                    <strong>{{ $errors->first('contenido') }}</strong>
-                                </span>
-                                @endif
+                                <textarea name="contenido" id="contenido" class="form-control" placeholder="Escriba el contenido de la noticia"></textarea>
                             </div>
                             <div class="row d-print-none mt-2">
                                 <div class="col-12 text-right">
@@ -33,7 +28,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <input type="hidden" name="profe_id" id="profe_id" value="{{$id}}">
+                            <input type="hidden" name="id_escritora" id="id_escritora" value="{{$id}}">
                         </form>
                     </div>
                 </div>

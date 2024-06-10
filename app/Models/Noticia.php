@@ -11,7 +11,7 @@ class Noticia extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable=[
-        'contenido','profe_id',
+        'contenido','id_escritora',
     ];
 
     public function escritora(){
