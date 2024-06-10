@@ -2,7 +2,7 @@
 
 @section('content')
 <h1 class="text-center">¡El registro se ha completado correctamente!</h1>
-<h4 class="text-center">Entregue la siguiente documentacion en nuestra oficina para completar la inscripcion:</h4>
+<h4 class="text-center">Entregue la siguiente documentacion en nuestra oficina para completar la inscripcion (Calle Aragón S/N Catral,Alicante)</h4>
 <div class="text-center">
   <ul class="list-unstyled">
     <li class="">Fotocopia SIP</li>
